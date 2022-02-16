@@ -1,0 +1,2 @@
+class CombatRow < ApplicationRecord
+end
