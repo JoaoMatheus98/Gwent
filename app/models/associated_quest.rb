@@ -1,0 +1,2 @@
+class AssociatedQuest < ApplicationRecord
+end
