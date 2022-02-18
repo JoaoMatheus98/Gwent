@@ -1,0 +1,2 @@
+class AssociatedAchievamentsQuestController < ApplicationController
+end

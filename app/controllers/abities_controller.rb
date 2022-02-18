@@ -1,0 +1,2 @@
+class AbitiesController < ApplicationController
+end

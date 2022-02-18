@@ -10,8 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_17_163054) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_18_185331) do
   create_table "abilities", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "associated_achievements", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "associated_quests", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
@@ -23,6 +37,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_17_163054) do
     t.string "description"
     t.integer "attack"
     t.string "url_image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "faction_id"
+    t.integer "combat_rows_id"
+    t.integer "ability_id"
+    t.integer "effect_id"
+    t.index ["ability_id"], name: "index_cards_on_ability_id"
+    t.index ["combat_rows_id"], name: "index_cards_on_combat_rows_id"
+    t.index ["effect_id"], name: "index_cards_on_effect_id"
+    t.index ["faction_id"], name: "index_cards_on_faction_id"
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "country"
+    t.string "owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,6 +81,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_17_163054) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "npcs", force: :cascade do |t|
+    t.string "location"
+    t.string "name"
+    t.boolean "uniqueCard"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "city_id"
+    t.integer "faction_id"
+    t.index ["city_id"], name: "index_npcs_on_city_id"
+    t.index ["faction_id"], name: "index_npcs_on_faction_id"
+  end
+
   create_table "rules", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", null: false
@@ -62,4 +105,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_17_163054) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "cards", "abilities"
+  add_foreign_key "cards", "combat_rows", column: "combat_rows_id"
+  add_foreign_key "cards", "effects"
+  add_foreign_key "cards", "factions"
+  add_foreign_key "npcs", "cities"
+  add_foreign_key "npcs", "factions"
 end
