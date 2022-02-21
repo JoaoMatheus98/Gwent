@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :factions
+  
+  # Faction routes
   get '/factions', to: 'factions#index'
-  resources :combat_rows
+  get '/factions/:id', to: 'factions#show'
+
+  # Combat_rows routes
   get '/combat_rows', to: 'combat_rows#index'
 end

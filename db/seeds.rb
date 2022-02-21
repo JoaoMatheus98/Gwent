@@ -48,3 +48,38 @@ Rule.create!(description: "Players place a Unit Card on the Gwent board in the d
 Rule.create!(description: "Each unit Card has Strength points that are added for each player's total. A player will win a round of Gwent when the player has more points than the other and both players no longer have cards to play or the other player passes their turn.")
 Rule.create!(description: "Matches are set with 2 wins out of 3 rounds. This is represented by the Round Points, or red gems, next to each player's name. Losing a round loses you one of the points, if you lose both you lose the match. A draw makes both players lose a point unless you are the Nilfgaardian Empire.")
 
+City.create!(name: "White Orchard", country: "Temeria", description: "White Orchard is a region and village located in Temeria famous for its fruit orchards, whose boughs burst out white blossoms come spring. The Ismena river flows through the village and continues north.", owner: "Ignatius Verrieres")
+City.create!(name: "Vizima", country: "Temeria", description: "Vizima, Wyzim, or Wyzima is the capital city of Temeria, one of the Northern Kingdoms.", owner: "Temerian monarchy")
+City.create!(name: "Velen", country: "Temeria", description: "Velen, also called No Man's Land, is a province situated in northern Temeria, north of its capital Gors Velen.", owner: "Phillip Strenger")
+
+=begin
+#White Orchard
+Npc.create!(location: "White Orchard Inn", name: "Aldert Geert", uniqueCard: true, city_id: "1", faction_id: 1)
+
+#Vizima
+Npc.create!(location: "Royal garden", name: "Nobleman", uniqueCard: true, city_id: 2, faction_id: 1)
+
+#Velen
+Npc.create!(location: "Blackbough", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 1)
+Npc.create!(location: "Blackbough", name: "Blacksmith", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Claywich", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Crow's Perch", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Crow's Perch", name: "Yona", uniqueCard: false, city_id: 3, faction_id: 2)
+Npc.create!(location: "Crow's Perch", name: "Fergus Graem", uniqueCard: false, city_id: 3, faction_id: 4)
+Npc.create!(location: "Crow's Perch", name: "Quartermaster", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Crow's Perch", name: "Bloody Baron", uniqueCard: true, city_id: 3, faction_id: 3)
+Npc.create!(location: "Downwarren", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 2)
+Npc.create!(location: "Lindenvale", name: "Blacksmith", uniqueCard: false, city_id: 3, faction_id: 4)
+Npc.create!(location: "Lindenvale", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Midcopse", name: "Armorer", uniqueCard: false, city_id: 3, faction_id: 1)
+Npc.create!(location: "Midcopse", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 2)
+Npc.create!(location: "Midcopse", name: "Haddy", uniqueCard: true, city_id: 3, faction_id: 3)
+Npc.create!(location: "Mulbrydale", name: "Armorer/Swordsmith", uniqueCard: false, city_id: 3, faction_id: 2)
+Npc.create!(location: "Nilfgaardian Army Group 'Center' Camp", name: "	Quartermaster Eggebracht", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Oreton", name: "Merchant", uniqueCard: false, city_id: 3, faction_id: 3)
+Npc.create!(location: "Oreton", name: "Boatwright", uniqueCard: true, city_id: 3, faction_id: 1)
+Npc.create!(location: "Benek", name: "Old Sage", uniqueCard: true, city_id: 3, faction_id: 2)
+Npc.create!(location: "Inn at the Crossroads", name: "Innkeep", uniqueCard: true, city_id: 3, faction_id: 1)
+Npc.create!(location: "Cunny of the Goose", name: "Innkeep", uniqueCard: false, city_id: 3, faction_id: 4)
+Npc.create!(location: "Between Loggers' Hut and Lucian's Windmill", name: "Merchant", uniqueCard: true, city_id: 3, faction_id: 4)
+=end
