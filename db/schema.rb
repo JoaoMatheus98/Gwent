@@ -40,11 +40,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_18_185331) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "faction_id"
-    t.integer "combat_rows_id"
+    t.integer "combat_row_id"
     t.integer "ability_id"
     t.integer "effect_id"
     t.index ["ability_id"], name: "index_cards_on_ability_id"
-    t.index ["combat_rows_id"], name: "index_cards_on_combat_rows_id"
+    t.index ["combat_row_id"], name: "index_cards_on_combat_row_id"
     t.index ["effect_id"], name: "index_cards_on_effect_id"
     t.index ["faction_id"], name: "index_cards_on_faction_id"
   end
@@ -106,7 +106,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_18_185331) do
   end
 
   add_foreign_key "cards", "abilities"
-  add_foreign_key "cards", "combat_rows", column: "combat_rows_id"
+  add_foreign_key "cards", "combat_rows"
   add_foreign_key "cards", "effects"
   add_foreign_key "cards", "factions"
   add_foreign_key "npcs", "cities"

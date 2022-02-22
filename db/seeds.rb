@@ -52,10 +52,9 @@ City.create!(name: "White Orchard", country: "Temeria", description: "White Orch
 City.create!(name: "Vizima", country: "Temeria", description: "Vizima, Wyzim, or Wyzima is the capital city of Temeria, one of the Northern Kingdoms.", owner: "Temerian monarchy")
 City.create!(name: "Velen", country: "Temeria", description: "Velen, also called No Man's Land, is a province situated in northern Temeria, north of its capital Gors Velen.", owner: "Phillip Strenger")
 
-=begin
-#White Orchard
-Npc.create!(location: "White Orchard Inn", name: "Aldert Geert", uniqueCard: true, city_id: "1", faction_id: 1)
 
+#White Orchard
+Npc.create!(location: "White Orchard Inn", name: "Aldert Geert", uniqueCard: true, city_id: 1, faction_id: 1)
 #Vizima
 Npc.create!(location: "Royal garden", name: "Nobleman", uniqueCard: true, city_id: 2, faction_id: 1)
 
@@ -82,4 +81,4 @@ Npc.create!(location: "Benek", name: "Old Sage", uniqueCard: true, city_id: 3, f
 Npc.create!(location: "Inn at the Crossroads", name: "Innkeep", uniqueCard: true, city_id: 3, faction_id: 1)
 Npc.create!(location: "Cunny of the Goose", name: "Innkeep", uniqueCard: false, city_id: 3, faction_id: 4)
 Npc.create!(location: "Between Loggers' Hut and Lucian's Windmill", name: "Merchant", uniqueCard: true, city_id: 3, faction_id: 4)
-=end
+

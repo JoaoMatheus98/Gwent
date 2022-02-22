@@ -1,3 +1,4 @@
 class Npc < ApplicationRecord
-    belongs_to :cities
+    belongs_to :city
+    belongs_to :faction
 end

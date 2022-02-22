@@ -1,6 +1,6 @@
 class Card < ApplicationRecord
-    belongs_to :abilities
-    belongs_to :combat_rows
-    belongs_to :effects
-    belongs_to :factions
+    belongs_to :ability
+    belongs_to :combat_row
+    belongs_to :effect
+    belongs_to :faction
 end
