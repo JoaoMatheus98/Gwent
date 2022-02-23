@@ -13,4 +13,7 @@ class FactionsController < ApplicationController
             render json: "Não encontrado"
         end
     end
+
+    def filter
+    end
 end
