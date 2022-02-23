@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   # Npcs routes
   get '/npcs', to: 'npcs#index'
   get '/npc/:id', to: 'npcs#show'
-  post '/npc/filter', to: 'npcs#filter_by_citys'
+  post '/npc/filter_by_factions', to: 'npcs#filter_by_factions'
+  post '/npc/filter_by_cities', to: 'npcs#filter_by_cities'
 end
